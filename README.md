@@ -1,4 +1,4 @@
-# 🏭 Predictive Maintenance Dashboard
+#  Predictive Maintenance Dashboard
 
 > Real-time machine health monitoring, ML-driven failure prediction, and automated shift reporting for industrial manufacturing (CNC machines & welding robots).
 
@@ -14,7 +14,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Unplanned downtime is the single most expensive failure mode on a factory floor. This project is an end-to-end **predictive maintenance** system that ingests machine telemetry (vibration, temperature, tool wear, spindle load, OEE), scores each asset's health in real time, predicts failure risk with a trained ML model, and pushes alerts + automated shift-handover reports to the maintenance team.
 
@@ -25,20 +25,20 @@ It models two very different asset classes with separate failure physics:
 
 The system is bilingual (English / Deutsch) and is designed to sit on top of SAP / Hydra-style MES exports.
 
-## ✨ Key Features
+##  Key Features
 
 | Capability | Description |
 |---|---|
 | 🩺 **Health Scoring** | 0–100 health index per machine using weighted, *exponential degradation* curves — a reading near the critical threshold is penalized far more than a mid-range one. |
-| 🤖 **Failure Prediction** | RandomForest / GradientBoosting classifiers with cross-validation and ROC-AUC evaluation. |
-| 📉 **Remaining Useful Life (RUL)** | Survival analysis (`lifelines`) to estimate time-to-failure. |
-| 🚨 **Anomaly Detection** | IsolationForest flags abnormal sensor signatures the rules don't catch. |
-| 📧 **Alert Engine** | Threshold-based alerting with optional SMTP email delivery. |
-| 📄 **Shift Handover Reports** | Auto-generated PDF reports for the 6 AM / 2 PM / 10 PM shift changes. |
-| 🌍 **Bilingual UI** | Full English / German translation layer. |
-| 📊 **Interactive Dashboard** | Plotly Dash UI with live KPIs, trend charts, and machine schematics. |
+|  **Failure Prediction** | RandomForest / GradientBoosting classifiers with cross-validation and ROC-AUC evaluation. |
+|  **Remaining Useful Life (RUL)** | Survival analysis (`lifelines`) to estimate time-to-failure. |
+|  **Anomaly Detection** | IsolationForest flags abnormal sensor signatures the rules don't catch. |
+|  **Alert Engine** | Threshold-based alerting with optional SMTP email delivery. |
+|  **Shift Handover Reports** | Auto-generated PDF reports for the 6 AM / 2 PM / 10 PM shift changes. |
+|  **Bilingual UI** | Full English / German translation layer. |
+|  **Interactive Dashboard** | Plotly Dash UI with live KPIs, trend charts, and machine schematics. |
 
-## 🧱 Architecture
+##  Architecture
 
 ```
                 ┌──────────────────────┐
@@ -65,7 +65,7 @@ The system is bilingual (English / Deutsch) and is designed to sit on top of SAP
                     └──────────────────────┘    └──────────────┘
 ```
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 predictive-maintenance-dashboard/
@@ -90,7 +90,7 @@ predictive-maintenance-dashboard/
 └── .env.example
 ```
 
-## ⚡ Quickstart
+##  Quickstart
 
 ```bash
 # 1. Clone
@@ -115,31 +115,31 @@ python app.py
 
 Copy `.env.example` to `.env` to configure data source, ports, and (optional) email alerts.
 
-## 🧪 Tests
+##  Tests
 
 ```bash
 pytest -q
 ```
 
-## 🔬 ML Methodology
+##  ML Methodology
 
 - **Labeling.** A machine is labeled *at-risk* when its computed health score drops below 60. This turns an unsupervised health index into a supervised classification target.
 - **Models.** RandomForest and GradientBoosting are trained inside a `Pipeline` with `StandardScaler`, compared via 5-fold cross-validation, and evaluated with `classification_report` + ROC-AUC.
 - **RUL.** Survival models estimate remaining useful life so planners can schedule maintenance *before* failure, not after.
 - **Anomaly detection.** IsolationForest provides an unsupervised second opinion for novel failure signatures.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Python · Dash · Plotly · pandas · NumPy · scikit-learn · lifelines · pytest · python-dotenv**
 
-## 📈 Roadmap
+##  Roadmap
 
 - [ ] Containerize with Docker + docker-compose
 - [ ] Stream live telemetry via MQTT/Kafka instead of batch Excel
 - [ ] Model registry + drift monitoring
 - [ ] Role-based authentication for the dashboard
 
-## 📝 License
+##  License
 
 MIT © [Harshal Ingawale](https://github.com/harshalingawale)
 
