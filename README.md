@@ -29,7 +29,7 @@ The system is bilingual (English / Deutsch) and is designed to sit on top of SAP
 
 | Capability | Description |
 |---|---|
-| 🩺 **Health Scoring** | 0–100 health index per machine using weighted, *exponential degradation* curves — a reading near the critical threshold is penalized far more than a mid-range one. |
+|  **Health Scoring** | 0–100 health index per machine using weighted, *exponential degradation* curves — a reading near the critical threshold is penalized far more than a mid-range one. |
 |  **Failure Prediction** | RandomForest / GradientBoosting classifiers with cross-validation and ROC-AUC evaluation. |
 |  **Remaining Useful Life (RUL)** | Survival analysis (`lifelines`) to estimate time-to-failure. |
 |  **Anomaly Detection** | IsolationForest flags abnormal sensor signatures the rules don't catch. |
