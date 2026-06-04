@@ -3,6 +3,7 @@
 > Real-time machine health monitoring, ML-driven failure prediction, and automated shift reporting for industrial manufacturing (CNC machines & welding robots).
 
 <p align="left">
+  <img src="https://github.com/Harshalingawale/predictive-maintenance-dashboard/actions/workflows/ci.yml/badge.svg" alt="CI" />
   <img src="https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Dash-Plotly-3F4F75?logo=plotly&logoColor=white" />
   <img src="https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikit-learn&logoColor=white" />
