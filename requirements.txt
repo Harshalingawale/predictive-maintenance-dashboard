@@ -20,7 +20,7 @@ joblib==1.4.2          # Save/load trained models
 lifelines==0.29.0      # Survival analysis / RUL
 
 # Utilities
-python-dotenv==1.0.1   # Load .env config
+python-dotenv==1.2.2   # Load .env config
 
 # Dev Tools (optional but recommended)
 ipykernel              # Jupyter notebooks inside VS Code
