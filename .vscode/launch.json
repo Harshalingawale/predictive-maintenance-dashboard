@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // ── Run the Dash dashboard ──────────────────
+            "name": "▶ Run Dashboard",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/app.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "justMyCode": true
+        },
+        {
+            // ── Regenerate the SAP simulated dataset ───
+            "name": "🔄 Regenerate SAP Dataset",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/data/generate_dataset.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            // ── Retrain the ML model ────────────────────
+            "name": "🤖 Train ML Model",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/models/train.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "justMyCode": true
+        },
+        {
+            // ── Run tests ──────────────────────────────
+            "name": "🧪 Run All Tests",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": ["tests/", "-v"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}
